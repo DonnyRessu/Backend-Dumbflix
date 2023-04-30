@@ -88,7 +88,6 @@ func (h *handlerEpisode) CreateEpisode(c echo.Context) error {
 	}
 
 	linkFilm := c.FormValue("linkfilm")
-
 	if linkFilm == "" {
 		return c.JSON(http.StatusBadRequest, dto.ErrorResult{Code: http.StatusBadRequest, Message: "Butuh linkFIlm"})
 	}
